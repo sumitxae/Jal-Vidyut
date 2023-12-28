@@ -1,6 +1,3 @@
-Great! Let's tailor the README accordingly to highlight the specific features of your IoT-based web app for tracking daily water and electricity consumption, providing weekly analysis, and incorporating challenges. Here's an updated template:
-
-```markdown
 # IoT-based Water and Electricity Tracking Web App
 
 Web application for tracking daily water and electricity consumption, providing weekly analysis, and featuring challenges for earning credits.
