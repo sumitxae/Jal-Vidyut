@@ -1,0 +1,22 @@
+<% include ./partials/header.ejs %>
+    <div class="w-full">
+        <div class="w-full flex items-end justify-start gap-5 px-8 py-6">
+            <img class="h-full w-1/6" src="/images/adobbe-logo 1.svg" alt="">
+            <img class="h-3/5 w-1/3" src="/images/jal-vidyut-name 1.png" alt="">
+        </div>
+        <main class="px-9 w-full py-5">
+            <p class="text-5xl font-semibold mb-8">Sign in to your Account!</p>
+            <div class="Rectangle2 w-full bg-neutral-100 flex rounded-md">
+                <div class="Rectangle1 w-1/2 h-full py-6 pl-11 pr-6 text-4xl font-[600] bg-green-400 rounded-2xl text-[#f6f4f4]">Mobile</div>
+                <div class="Rectangle1 w-1/2 h-full py-6 pl-11 pr-6 text-4xl font-[600] rounded-2xl">Email</div>
+            </div>
+            <div class="w-full h-1/3 mt-14 mb-2 flex flex-col">
+                <form action="/login" method="post">
+                    <input class="w-full py-2 h-24 pl-7 text-4xl rounded-2xl bg-neutral-100 mb-7 outline-none" name="username" type="text" placeholder="Mobile Number">
+                    <input class="w-full py-2 h-24 pl-7 text-4xl rounded-2xl bg-neutral-100 mb-7 outline-none" name="password" type="text" placeholder="Password">
+                    <input class="w-full py-2 h-24 text-4xl rounded-2xl bg-green-400 text-[#f6f4f4] font-semibold mb-7 outline-none" type="submit">
+                </form>
+            </div>
+            <p class="text-3xl">Don't Have an Account ? <a class="text-blue-400" href="/register">Sign up</a></p>
+        </main> 
+    </div>

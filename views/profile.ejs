@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jal-Vidut</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+<style>
+ .header {
+        position:relative;
+        text-align:center;
+        height:70%;
+        width: 50%;
+        border-radius: 50%;
+        overflow: hidden;
+        color:white;
+        display:flex;
+        align-items:center;
+    }
+    .logo {
+        width:50px;
+        fill:white;
+        padding-right:15px;
+        display:inline-block;
+        vertical-align: middle;
+    }
+
+    .inner-header {
+        height:65%;
+        width:100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .h{
+        margin-top: 160%;
+        /* transform: translateY(-250%); */
+        width:100%;
+    }
+
+    .flex { /*Flexbox for containers*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .waves {
+        position:relative;
+        width: 100%;
+        height:70vh;
+        margin-bottom:-7px; /*Fix for safari gap*/
+        min-height:100px;
+        max-height:150px;
+        transform:scale(2,3)
+    }
+
+    .content {
+        position:relative;
+        height:20vh;
+        text-align:center;
+        background-color: white;
+    }
+
+    /* Animation */
+
+    .parallax > use {
+        animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+    }
+    .parallax > use:nth-child(1) {
+        animation-delay: -2s;
+        animation-duration: 4s;
+    }
+    .parallax > use:nth-child(2) {
+        animation-delay: -3s;
+        animation-duration: 7s;
+    }
+    .parallax > use:nth-child(3) {
+        animation-delay: -4s;
+        animation-duration: 9s;
+    }
+    .parallax > use:nth-child(4) {
+        animation-delay: -5s;
+        animation-duration: 14s;
+    }
+    @keyframes move-forever {
+        0% {
+        transform: translate3d(-90px,0,0);
+        }
+        100% { 
+            transform: translate3d(85px,0,0);
+        }
+    }
+    /*Shrinking for mobile*/
+    @media (max-width: 768px) {
+        .waves {
+            height:40px;
+            min-height:40px;
+        }
+        .content {
+            height:30vh;
+        }
+        h1 {
+            font-size:24px;
+        }
+    }
+</style>
+<body class="w-screen max-h-screen h-screen flex flex-col items-start justify-between font-[gilroy]">
+    <div class="w-full">
+        <div class="w-full flex items-end justify-start gap-5 px-8 py-6">
+            <img class="h-full w-1/6" src="/images/adobbe-logo 1.svg" alt="">
+            <img class="h-3/5 w-1/3" src="/images/jal-vidyut-name 1.png" alt="">
+        </div>
+    </div>
+
+    <div class="hero w-full h-[84vh] border-4 px-5 py-8">
+        <div class="profile h-1/4 mb-10 w-full border-b-orange-200 border-b-8 py-6 px-16 flex items-center justify-center">
+            <img class="h-full w-1/2 shadow-xl rounded-full" src="https://imgs.search.brave.com/OH1fF1QuXauaP6P4vFtG6vAKHUbPcSTB2SZSCzozXCI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by91/c2VyLWZyb250LXNp/ZGUtd2l0aC13aGl0/ZS1iYWNrZ3JvdW5k/XzE4NzI5OS00MDAw/Ny5qcGc_c2l6ZT02/MjYmZXh0PWpwZw" alt="">
+        </div>
+        <div class="w-full mb-10">
+            <div class="flex w-full items-center rounded-2xl bg-neutral-200 justify-between text-3xl py-5 mb-6 px-8">
+                <p class="py-3 w-1/2 text-start font-semibold text-gray-600">Sumit Choudhary</p>
+                <a class="font-semibold text-blue-600" href="">Edit</a>
+            </div>
+            <div class="flex w-full items-center rounded-2xl bg-neutral-200 justify-between text-3xl py-5 px-8">
+                <p class="py-3 w-1/2 text-start font-semibold text-gray-600">sumitxae@gmail.com</p>
+                <a class="font-semibold text-blue-600" href="">Change</a>
+            </div>
+        </div>
+        <div class="w-full flex items-center justify-center h-1/3 relative">
+            <div class="header border-[7px] relative border-[rgba(0,220,255,0.5)]">
+                <div class='h border-sky-400'>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="2" fill="rgba(0,190,255,0.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="4" fill="rgba(0,220,255,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="2" fill="rgba(0,250,255,0.3)" />
+                </g>
+                </svg>
+                </div>
+                <p class="real text-black absolute top-1/2 left-1/2 -translate-x-1/2 text-4xl font-bold -translate-y-1/2">0 %</p>
+            </div>    
+        </div>
+        <div class="w-full flex items-center justify-center">
+            <div class="w-1/2 py-6 bg-green-400 rounded-full">
+                <p class="text-4xl text-slate-100 font-semibold ">Logout</p>
+            </div>
+        </div>
+    </div>
+    <footer class="h-[6.4vmax] w-full flex items-center justify-between pt-4 pb-8 px-5 bg-neutral-100">
+        <a class="w-1/5 flex flex-col h-[95%] gap-2 items-center justify-between" href="/analyse-water">
+          <img class="w-full h-[80%] object-contain" src="/images/analysis-bar.png" alt="">
+          <p class="text-3xl font-[600]">Analytics</p>
+        </a>
+        <a class="w-1/5 flex flex-col h-[95%] gap-2 items-center justify-between" href="/water">
+          <img class="w-full h-[80%] object-contain" src="/images/battery.svg" alt="">
+          <p class="text-3xl font-[600]">Usage</p>
+        </a>
+        <a class="w-1/5 flex flex-col h-[95%] gap-2 items-center justify-between" href="/home">
+          <img class="w-full h-[80%] object-contain" src="/images/house-solid 1.png" alt="">
+          <p class="text-3xl font-[600]">Home</p>
+        </a>
+        <a class="w-1/5 flex flex-col h-[95%] gap-2 items-center justify-between" href="/profile">
+          <img class="w-full h-[80%] object-contain" src="/images/account-circle-line.svg" alt="">
+          <p class="text-3xl font-[600]">Profile</p>
+        </a>
+        <a class="w-1/5 flex flex-col h-[95%] gap-2 items-center justify-between" href="/goals">
+          <img class="w-full h-[80%] object-contain" src="/images/rupee-coin-solid-icon 1.svg" alt="">
+          <p class="text-3xl font-[600]">Coin</p>
+        </a>
+      </footer>    
+<script>
+    var container = document.querySelector(".h");
+    var per = document.querySelector(".real");
+    setInterval(() => {
+        const real2 = Math.round(Math.random(Math.floor())*100);
+        let real = real2*2.6;
+        per.textContent = real2+"%";
+        container.style.transform = `translateY(${-real}%)`;
+    }, 5000);
+</script>
+</body>
+</html>

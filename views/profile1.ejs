@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<style>
+    .header {
+        position:relative;
+        text-align:center;
+        height:30vh;
+        width:30vh;
+        border-radius: 50%;
+        overflow: hidden;
+        color:white;
+        display:flex;
+        align-items:center;
+    }
+    .logo {
+        width:50px;
+        fill:white;
+        padding-right:15px;
+        display:inline-block;
+        vertical-align: middle;
+    }
+
+    .inner-header {
+        height:65%;
+        width:100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .h{
+        margin-top: 150%;
+        /* transform: translateY(-600%); */
+        width:100%;
+    }
+
+    .flex { /*Flexbox for containers*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .waves {
+        position:relative;
+        width: 100%;
+        height:70vh;
+        margin-bottom:-7px; /*Fix for safari gap*/
+        min-height:100px;
+        max-height:150px;
+        transform:scale(4,7)
+    }
+
+    .content {
+        position:relative;
+        height:20vh;
+        text-align:center;
+        background-color: white;
+    }
+
+    /* Animation */
+
+    .parallax > use {
+        animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+    }
+    .parallax > use:nth-child(1) {
+        animation-delay: -2s;
+        animation-duration: 7s;
+    }
+    .parallax > use:nth-child(2) {
+        animation-delay: -3s;
+        animation-duration: 10s;
+    }
+    .parallax > use:nth-child(3) {
+        animation-delay: -4s;
+        animation-duration: 13s;
+    }
+    .parallax > use:nth-child(4) {
+        animation-delay: -5s;
+        animation-duration: 20s;
+    }
+    @keyframes move-forever {
+        0% {
+        transform: translate3d(-90px,0,0);
+        }
+        100% { 
+            transform: translate3d(85px,0,0);
+        }
+    }
+    /*Shrinking for mobile*/
+    @media (max-width: 768px) {
+        .waves {
+            height:40px;
+            min-height:40px;
+        }
+        .content {
+            height:30vh;
+        }
+        h1 {
+            font-size:24px;
+        }
+    }
+</style>
+<div class="header border-[7px] relative border-[rgba(0,220,255,0.5)]">
+
+    <div class='h border-sky-400'>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0,190,255,0.7)" />
+    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0,220,255,0.5)" />
+    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,250,255,0.3)" />
+    <!-- <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" /> -->
+    </g>
+    </svg>
+    </div>
+    <p class="real absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></p>
+</div>
+<script>
+    var container = document.querySelector(".h");
+    var per = document.querySelector(".real");
+    setInterval(() => {
+        const real2 = Math.round(Math.random(Math.floor())*100);
+        let real = real2*6;
+        per.textContent = real2;
+        container.style.transform = `translateY(${-real}%)`;
+    }, 1000);
+</script>
+</body>
+</html>
