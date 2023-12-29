@@ -121,11 +121,11 @@
         </div>
         <div class="w-full mb-10">
             <div class="flex w-full items-center rounded-2xl bg-neutral-200 justify-between text-3xl py-5 mb-6 px-8">
-                <p class="py-3 w-1/2 text-start font-semibold text-gray-600">Sumit Choudhary</p>
+                <p class="py-3 w-1/2 text-start font-semibold text-gray-600"><%= user.name %></p>
                 <a class="font-semibold text-blue-600" href="">Edit</a>
             </div>
             <div class="flex w-full items-center rounded-2xl bg-neutral-200 justify-between text-3xl py-5 px-8">
-                <p class="py-3 w-1/2 text-start font-semibold text-gray-600">sumitxae@gmail.com</p>
+                <p class="py-3 w-1/2 text-start font-semibold text-gray-600"><%= user.username %></p>
                 <a class="font-semibold text-blue-600" href="">Change</a>
             </div>
         </div>
@@ -149,7 +149,7 @@
         </div>
         <div class="w-full flex items-center justify-center">
             <div class="w-1/2 py-6 bg-green-400 rounded-full">
-                <p class="text-4xl text-slate-100 font-semibold ">Logout</p>
+                <a href="/logout" class="text-4xl text-slate-100 font-semibold ">Logout</a>
             </div>
         </div>
     </div>

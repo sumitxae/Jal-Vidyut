@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const expressSession = require('express-session');
+const MongoStore = require('connect-mongo');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -18,7 +19,12 @@ app.set('view engine', 'ejs');
 app.use(expressSession({
   resave: false,
   saveUninitialized: false,
-  secret: "Jal hi jeevan hai"
+  secret: "Jal hi jeevan hai",
+  store: MongoStore.create({
+    mongoUrl: 'mongodb://0.0.0.0:27017/ccet', // Replace with your MongoDB connection string
+    collectionName: 'sessions', // Optional: specify the name of the collection to store sessions
+    ttl: 24 * 60 * 60, // Optiona: session TTL (time to live) in seconds
+  }),
 }));
 
 app.use(passport.initialize());
