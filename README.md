@@ -1,4 +1,5 @@
-# Jal-Vidyu
+# Jal-Vidyut
+
 ## IoT-based Water and Electricity Tracking Web App
 
 Web application for tracking daily water and electricity consumption, providing weekly analysis, and featuring challenges for earning credits.
