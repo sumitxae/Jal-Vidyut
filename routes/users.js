@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 const plm = require('passport-local-mongoose');
+require("dotenv").config({
+  path: "./.env",
+});
 
-mongoose.connect("mongodb+srv://sumitxae:sumitxae@cluster0.nyy25em.mongodb.net/ccet?retryWrites=true&w=majority&appName=Cluster0");
+mongoose.connect(process.env.MONGO_URL);
 
 const userSchema = mongoose.Schema({
   username: {
